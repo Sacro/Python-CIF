@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `activation` (
   `train_id` varchar(10) DEFAULT NULL,
   `train_service_code` varchar(8) DEFAULT NULL,
   `train_uid` varchar(6) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `association` (
   KEY `location` (`location`),
   KEY `main_train_uid` (`main_train_uid`),
   KEY `assoc_train_uid` (`assoc_train_uid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `location` (
   KEY `tiploc_code` (`tiploc_code`),
   KEY `public_call` (`public_call`),
   KEY `actual_call` (`actual_call`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -155,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `movement` (
   `train_service_code` varchar(8) DEFAULT NULL,
   `train_terminated` tinyint(1) DEFAULT NULL,
   `variation_status` enum('EARLY','ON TIME','LATE','OFF ROUTE') DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -218,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `schedule` (
   KEY `bank_hol` (`bank_holiday_running`),
   KEY `status` (`train_status`),
   KEY `atoc_code` (`atoc_code`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -234,7 +234,7 @@ CREATE TABLE IF NOT EXISTS `td_feed` (
   `from_loc` text,
   `descr` text,
   `report_time` text
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -252,4 +252,4 @@ CREATE TABLE IF NOT EXISTS `tiploc` (
   PRIMARY KEY (`tiploc`),
   KEY `crs_code` (`crs_code`),
   KEY `stanox` (`stanox`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
