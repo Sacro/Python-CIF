@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `association` (
   KEY `location` (`location`),
   KEY `main_train_uid` (`main_train_uid`),
   KEY `assoc_train_uid` (`assoc_train_uid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2819 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
@@ -218,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `schedule` (
   KEY `bank_hol` (`bank_holiday_running`),
   KEY `status` (`train_status`),
   KEY `atoc_code` (`atoc_code`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11973 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;
 
 -- --------------------------------------------------------
 
